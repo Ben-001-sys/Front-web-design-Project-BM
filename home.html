@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Becoming Me – The Digital Journey</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      /* Hero background with overlay */
+      .hero-img {
+        background-image: url("https://images.unsplash.com/photo-1522199710521-72d69614c702");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .hero-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+      }
+
+      /* Button animation */
+      .btn-primary {
+        background-color: #2563eb;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 8px;
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background-color: #1e40af;
+        transform: translateY(-3px);
+      }
+
+      /* Service card hover */
+      .service-card {
+        transition: 0.35s;
+      }
+      .service-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <!-- HEADER -->
+    <header class="bg-white dark:bg-gray-800 shadow py-6">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-green-700">Arden Studios</h1>
+        <nav class="space-x-4">
+          <a href="home.html" class="hover:text-green-600 font-semibold"
+            >Home</a
+          >
+          <a href="portfolio.html" class="hover:text-green-600">Portfolio</a>
+          <a href="about.html" class="hover:text-green-600">About</a>
+          <a href="blog.html" class="hover:text-green-600">Blog</a>
+          <a href="contact.html" class="hover:text-green-600">Contact</a>
+          <button
+            id="themeToggle"
+            class="px-3 py-1 rounded-lg bg-gray-800 text-white dark:bg-gray-200 dark:text-black shadow-lg transition hover:scale-105"
+          >
+            Toggle Theme
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ====================== HERO SECTION ====================== -->
+    <section class="hero-img relative text-white py-28 px-6 text-center">
+      <div class="relative z-10">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+          Becoming Me — The Digital Journey
+        </h1>
+        <p class="mt-4 text-gray-200 text-lg md:text-xl max-w-2xl mx-auto">
+          Crafting my identity in the digital world, one pixel at a time.
+        </p>
+
+        <a href="#services" class="btn-primary mt-6"> Explore My Journey </a>
+      </div>
+    </section>
+
+    <!-- ====================== INTRO SECTION ====================== -->
+    <section class="py-16 px-6 max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Hello, I'm Arden 👋</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+        I'm a passionate creative who loves turning ideas into digital
+        experiences. From UI/UX design to frontend development, my goal is to
+        build meaningful and visually impactful solutions that reflect my
+        journey and growth.
+      </p>
+    </section>
+
+    <!-- ====================== SERVICES ====================== -->
+    <section id="services" class="py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center">My Services</h2>
+        <p class="text-center text-gray-600 dark:text-gray-400 mt-2 mb-10">
+          What I can help you create
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="service-card bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow"
+          >
+            <h3 class="text-xl font-semibold mb-3">UI/UX Design</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Modern, clean, and user-centered interfaces designed with
+              creativity.
+            </p>
+          </div>
+
+          <div
+            class="service-card bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow"
+          >
+            <h3 class="text-xl font-semibold mb-3">Frontend Development</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Responsive websites built using HTML, CSS, JavaScript, and
+              Tailwind CSS.
+            </p>
+          </div>
+
+          <div
+            class="service-card bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow"
+          >
+            <h3 class="text-xl font-semibold mb-3">Brand Identity</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Complete brand systems including logos, colors, and typography.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CONTACT FORM ====================== -->
+    <section class="py-16 px-6 bg-gray-100 dark:bg-gray-900">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center">Contact Me</h2>
+        <p class="text-center text-gray-600 dark:text-gray-400 mt-2 mb-10">
+          Let's build something great together
+        </p>
+
+        <form
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6"
+        >
+          <div>
+            <label class="block font-semibold mb-1">Name</label>
+            <input
+              type="text"
+              class="w-full border dark:border-gray-600 rounded-lg p-3 bg-gray-50 dark:bg-gray-700 outline-none"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div>
+            <label class="block font-semibold mb-1">Email</label>
+            <input
+              type="email"
+              class="w-full border dark:border-gray-600 rounded-lg p-3 bg-gray-50 dark:bg-gray-700 outline-none"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div>
+            <label class="block font-semibold mb-1">Message</label>
+            <textarea
+              class="w-full border dark:border-gray-600 rounded-lg p-3 h-32 bg-gray-50 dark:bg-gray-700 outline-none"
+              placeholder="Write your message..."
+            ></textarea>
+          </div>
+
+          <button class="btn-primary w-full text-center">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="bg-gray-900 dark:bg-black text-gray-300 py-8 text-center">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-lg font-semibold">Becoming Me – The Digital Journey</p>
+        <p class="text-sm mt-2">© 2025 Arden Studios. All Rights Reserved.</p>
+
+        <div class="flex justify-center mt-4 space-x-5">
+          <a href="#" class="hover:text-white transition">Facebook</a>
+          <a href="#" class="hover:text-white transition">Twitter</a>
+          <a href="#" class="hover:text-white transition">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ====================== DARK MODE TOGGLE JS ====================== -->
+    <script src="main.js"></script>
+  </body>
+</html>

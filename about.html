@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me – Becoming Me</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .fade {
+        animation: fadeIn 1s ease forwards;
+        opacity: 0;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        background: #2563eb;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <!-- HEADER -->
+    <header class="bg-white dark:bg-gray-800 shadow py-6">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-green-700">Arden Studios</h1>
+        <nav class="space-x-4">
+          <a href="home.html" class="hover:text-green-600">Home</a>
+          <a href="portfolio.html" class="hover:text-green-600">Portfolio</a>
+          <a href="about.html" class="hover:text-green-600 font-semibold"
+            >About</a
+          >
+          <a href="blog.html" class="hover:text-green-600">Blog</a>
+          <a href="contact.html" class="hover:text-green-600">Contact</a>
+          <button
+            id="themeToggle"
+            class="px-3 py-1 rounded-lg bg-gray-800 text-white dark:bg-gray-200 dark:text-black shadow-lg transition hover:scale-105"
+          >
+            Toggle Theme
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ====================== HEADER SECTION ====================== -->
+    <section class="py-20 text-center bg-gray-200 dark:bg-gray-800 fade">
+      <h1 class="text-4xl md:text-5xl font-bold">About Me</h1>
+      <p class="text-gray-600 dark:text-gray-300 mt-3 text-lg">
+        My story, values, and the journey shaping who I’m becoming.
+      </p>
+    </section>
+
+    <!-- ====================== STORY + IMAGE ====================== -->
+    <section
+      class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center fade"
+    >
+      <div>
+        <img
+          src="/images/profile.JPG"
+          alt="My Image"
+          class="rounded-2xl shadow-xl w-full object-cover"
+        />
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold mb-4">My Background Story</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          My journey into the digital world began with curiosity — a curiosity
+          to understand how ideas become visuals, how visuals become
+          experiences, and how experiences shape the world around us.
+          <br /><br />
+          Over the years, I’ve grown through learning, experimentation, and
+          real-world collaboration. Everything I create today reflects the story
+          of becoming a better designer, developer, and storyteller.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================== JOURNEY TIMELINE ====================== -->
+    <section class="py-20 bg-white dark:bg-gray-800 fade">
+      <h2 class="text-3xl font-bold text-center mb-12">My Journey</h2>
+
+      <div class="relative timeline max-w-4xl mx-auto">
+        <div class="mb-12 flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 md:pr-8 text-right">
+            <h3 class="font-bold text-xl">2019 – The Discovery</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Started exploring design, editing tools, and understanding basics
+              of visuals.
+            </p>
+          </div>
+          <div class="w-8 h-8 bg-blue-600 rounded-full shadow-md"></div>
+          <div class="w-full md:w-1/2 md:pl-8"></div>
+        </div>
+
+        <div class="mb-12 flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 md:pr-8"></div>
+          <div class="w-8 h-8 bg-blue-600 rounded-full shadow-md"></div>
+          <div class="w-full md:w-1/2 md:pl-8">
+            <h3 class="font-bold text-xl">2021 – Skill Building</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Started UI/UX, video editing, and began working on personal brand
+              projects.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-12 flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 md:pr-8 text-right">
+            <h3 class="font-bold text-xl">2023 – Real Clients & Projects</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Delivered real creative projects for individuals and
+              organizations.
+            </p>
+          </div>
+          <div class="w-8 h-8 bg-blue-600 rounded-full shadow-md"></div>
+          <div class="w-full md:w-1/2 md:pl-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== VALUES, MISSION, PERSONALITY ====================== -->
+    <section class="py-20 max-w-6xl mx-auto px-6 fade">
+      <h2 class="text-3xl font-bold text-center">My Values & Mission</h2>
+      <p class="text-center mt-2 text-gray-600 dark:text-gray-300 mb-12">
+        What drives me and shapes the work I create.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-xl shadow">
+          <h3 class="font-bold text-xl mb-3">Values</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Creativity, authenticity, growth, and consistency guide everything I
+            do.
+          </p>
+        </div>
+
+        <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-xl shadow">
+          <h3 class="font-bold text-xl mb-3">Mission</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            To craft meaningful digital experiences that inspire, inform, and
+            empower others.
+          </p>
+        </div>
+
+        <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-xl shadow">
+          <h3 class="font-bold text-xl mb-3">Personality</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Calm, detail-oriented, imaginative, always learning, always
+            improving.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PEOPLE YOU WORKED WITH ====================== -->
+    <section class="py-20 bg-gray-200 dark:bg-gray-800 fade">
+      <h2 class="text-3xl font-bold text-center">People I’ve Worked With</h2>
+      <p class="text-center mt-2 text-gray-600 dark:text-gray-300 mb-12">
+        Collaborations that shaped my design journey.
+      </p>
+
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white dark:bg-gray-700 p-6 shadow rounded-xl text-center hover:scale-105 transition"
+        >
+          <h3 class="font-bold text-lg">Salifu Bilal</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-300">
+            Branding & Strategy
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-700 p-6 shadow rounded-xl text-center hover:scale-105 transition"
+        >
+          <h3 class="font-bold text-lg">Emmanuel Owusu-Boakye</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-300">
+            Digital Projects
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-700 p-6 shadow rounded-xl text-center hover:scale-105 transition"
+        >
+          <h3 class="font-bold text-lg">Rahim Sambo</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-300">
+            Content & Media
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="bg-gray-900 dark:bg-black text-gray-300 py-8 text-center">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-lg font-semibold">Becoming Me – The Digital Journey</p>
+        <p class="text-sm mt-2">© 2025 Arden Studios. All Rights Reserved.</p>
+
+        <div class="flex justify-center mt-4 space-x-5">
+          <a href="#" class="hover:text-white transition">Facebook</a>
+          <a href="#" class="hover:text-white transition">Twitter</a>
+          <a href="#" class="hover:text-white transition">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ====================== DARK MODE TOGGLE JS ====================== -->
+    <script src="main.js"></script>
+  </body>
+</html>
